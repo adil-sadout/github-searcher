@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types'; 
 
-function Search ({ searchUsers, showClear, clearUsers, setAlert}){
+const Search = ({ searchUsers, showClear, clearUsers, setAlert})=> {
 
     const [text, setText] = useState('');
 
@@ -18,7 +18,7 @@ function Search ({ searchUsers, showClear, clearUsers, setAlert}){
             setAlert('Please enter something', 'light');
         }else{
             searchUsers(text);
-            setText({text:''});
+            setText('');
         };
         
     };
